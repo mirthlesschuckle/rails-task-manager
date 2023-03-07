@@ -1,0 +1,9 @@
+<h1><%= @task.title %></h1>
+<p>Details: <%= @task.details %></p>
+<p>Completed: <%= @task.completed %></p>
+<ul style="list-style-type: none">
+  <li><%= link_to "Back to tasks", tasks_path %></li>
+  <li><%= link_to "Edit task", edit_task_path %></li>
+
+  <li><%= link_to "Delete task", delete_task_path, data: { turbo_method: 'DELETE', turbo_confirm: 'Are you sure?' } %></li>
+</ul>
